@@ -9,3 +9,5 @@ Application Demo: https://booking-app-es.netlify.app/
 <li>Formik</li>
 <li>Axios</li>
 <li>SASS</li>
+<br/>
+<a href='https://github.com/kenangenjac/booking-app-backend' target='_blank'><b>Backend</b></a> was made using .NET 6.0 and EF Core.
