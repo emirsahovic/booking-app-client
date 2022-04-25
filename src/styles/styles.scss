@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+$primary-color: #F16A67;
+
+#hideMe {
+    -moz-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 3s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: all;
+    transition-duration: 0.2s;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.p-left {
+    padding-left: 1.5rem !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    content: '' !important;
+}
+
+#cb {
+    accent-color: #F16A67;
+}
+
+input.larger {
+    width: 18px;
+    height: 18px;
+}
+
+.prim-color {
+    color: $primary-color;
+    font-weight: bold;
+}
+
+.btn-hover:hover {
+    opacity: 0.75;
+}
+
+@keyframes cssAnimation {
+    to {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+@-webkit-keyframes cssAnimation {
+    to {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+.rating span {
+    margin: 0.1rem;
+}
+
+.vline {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    margin: 0;
+    border: 1px solid #E9E9E9;
+    z-index: 10;
+}
+
+.loadingSpinnerContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15rem;
+}
+
+.loadingSpinner {
+    width: 8rem;
+    height: 6rem;
+    border: 1rem solid;
+    border-color: #F16A67 transparent #F16A67 transparent;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
