@@ -1,12 +1,11 @@
 import { Box, Typography } from "@mui/material"
-import { BsStarFill, BsStarHalf } from 'react-icons/bs';
 import { MdLocationOn, MdArrowForwardIos } from 'react-icons/md';
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
 
 const AccommodationItem = ({ acc }) => {
     return (
-        <Box display='flex' flexDirection='column' sx={{ pb: '4.2rem', mb: '3rem', ml: '2.2rem', width: '20rem', height: '20rem', backgroundColor: '#fff', borderRadius: '10px', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}>
+        <Box display='flex' flexDirection='column' sx={{ pb: '4.2rem', mb: '3rem', ml: '2.2rem', width: '19rem', height: '20rem', backgroundColor: '#fff', borderRadius: '10px', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}>
             <img src={acc.images[0].url} style={{ borderRadius: '10px', minHeight: '65%' }} />
             <Typography variant='h5' sx={{ fontWeight: '600', pl: '1rem', pt: '0.7rem' }}>{acc.name}</Typography>
             <Box display='flex' justifyContent='space-between' sx={{ my: '0.5rem', pl: '1rem' }}>

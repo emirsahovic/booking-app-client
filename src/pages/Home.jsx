@@ -1,6 +1,6 @@
-import { Typography, Box, Container, Button } from '@mui/material';
+import { Typography, Box, Container } from '@mui/material';
 import NavigationBar from '../components/NavigationBar';
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+import { MdOutlineArrowForwardIos, MdOutlineArrowBackIos } from 'react-icons/md';
 import Spinner from '../components/Spinner';
 import Footer from '../components/Footer';
 
@@ -23,8 +23,9 @@ function SampleNextArrow(props) {
             className={className}
             onClick={onClick}
         >
-            <AiOutlineArrowRight
-                style={{ color: '#F16A67' }}
+            <MdOutlineArrowForwardIos
+                className='btn-hover'
+                style={{ color: '#F16A67', cursor: 'pointer' }}
                 size={40}
             />
         </div>
@@ -38,8 +39,9 @@ function SamplePrevArrow(props) {
             className={className}
             onClick={onClick}
         >
-            <AiOutlineArrowLeft
-                style={{ color: '#F16A67' }}
+            <MdOutlineArrowBackIos
+                className='btn-hover'
+                style={{ color: '#F16A67', cursor: 'pointer' }}
                 size={40}
             />
         </div>
@@ -91,60 +93,64 @@ const Home = () => {
                     <Box sx={{ width: '50%' }}>
                         <Carousel autoPlay infiniteLoop showStatus={false} showThumbs={false} showArrows={false}>
                             <div>
-                                <img src={process.env.PUBLIC_URL + '/assets/zenica.png'} style={{ height: '19.5rem', width: '36rem', marginLeft: '12.8rem' }} alt='Logo' />
+                                <img src={'/assets/zenica.png'} style={{ height: '19.5rem', width: '36rem', marginLeft: '12.85rem' }} alt='Logo' />
                             </div>
                             <div>
-                                <img src={process.env.PUBLIC_URL + '/assets/travnik.png'} style={{ height: '19.5rem', width: '36rem', marginLeft: '12.8rem' }} alt='Logo' />
+                                <img src={'/assets/travnik.png'} style={{ height: '19.5rem', width: '36rem', marginLeft: '12.85rem' }} alt='Logo' />
                             </div>
                             <div>
-                                <img src={process.env.PUBLIC_URL + '/assets/sarajevo.png'} style={{ height: '19.5rem', width: '36rem', marginLeft: '12.8rem' }} alt='Logo' />
+                                <img src={'/assets/sarajevo.png'} style={{ height: '19.5rem', width: '36rem', marginLeft: '12.85rem' }} alt='Logo' />
                             </div>
                             <div>
-                                <img src={process.env.PUBLIC_URL + '/assets/mostar.png'} style={{ height: '19.5rem', width: '36rem', marginLeft: '12.8rem' }} alt='Logo' />
+                                <img src={'/assets/mostar.png'} style={{ height: '19.5rem', width: '36rem', marginLeft: '12.85rem' }} alt='Logo' />
                             </div>
                             <div>
-                                <img src={process.env.PUBLIC_URL + '/assets/travnik.png'} style={{ height: '19.5rem', width: '36rem', marginLeft: '12.8rem' }} alt='Logo' />
+                                <img src={'/assets/travnik.png'} style={{ height: '19.5rem', width: '36rem', marginLeft: '12.85rem' }} alt='Logo' />
                             </div>
                         </Carousel>
                     </Box>
                 </Box>
 
-                <Box sx={{ my: '3.2rem' }}>
+                <Box sx={{ my: '3.2rem', mr: '1.5rem' }}>
                     <Typography sx={{ fontSize: '2.5rem', fontWeight: '600', mb: '2rem' }}>Popular Cities</Typography>
-                    <Slider {...settings}>
-                        <div className='p-left'>
-                            <img src={process.env.PUBLIC_URL + '/assets/mostar.png'} style={{ width: '30rem', height: '20rem' }} />
-                            <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Mostar</Typography>
-                        </div>
-                        <div className='p-left'>
-                            <img src={process.env.PUBLIC_URL + '/assets/sarajevo.png'} style={{ width: '30rem', height: '20rem' }} />
-                            <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Sarajevo</Typography>
-                        </div>
-                        <div className='p-left'>
-                            <img src={process.env.PUBLIC_URL + '/assets/travnik.png'} style={{ width: '30rem', height: '20rem' }} />
-                            <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Travnik</Typography>
-                        </div>
-                        <div className='p-left'>
-                            <img src={process.env.PUBLIC_URL + '/assets/travnik.png'} style={{ width: '30rem', height: '20rem' }} />
-                            <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Jajce</Typography>
-                        </div>
-                        <div className='p-left'>
-                            <img src={process.env.PUBLIC_URL + '/assets/travnik.png'} style={{ width: '30rem', height: '20rem' }} />
-                            <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Tuzla</Typography>
-                        </div>
-                        <div className='p-left'>
-                            <img src={process.env.PUBLIC_URL + '/assets/travnik.png'} style={{ width: '30rem', height: '20rem' }} />
-                            <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Tešanj</Typography>
-                        </div>
-                    </Slider>
+                    <Box sx={{ maxWidth: '87.5rem', margin: 'auto' }}>
+                        <Slider {...settings}>
+                            <div className='p-left'>
+                                <img src={'/assets/mostar.png'} style={{ width: '30rem', height: '20rem' }} />
+                                <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Mostar</Typography>
+                            </div>
+                            <div className='p-left'>
+                                <img src={'/assets/sarajevo.png'} style={{ width: '30rem', height: '20rem' }} />
+                                <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Sarajevo</Typography>
+                            </div>
+                            <div className='p-left'>
+                                <img src={'/assets/travnik.png'} style={{ width: '30rem', height: '20rem' }} />
+                                <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Travnik</Typography>
+                            </div>
+                            <div className='p-left'>
+                                <img src={'/assets/travnik.png'} style={{ width: '30rem', height: '20rem' }} />
+                                <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Jajce</Typography>
+                            </div>
+                            <div className='p-left'>
+                                <img src={'/assets/travnik.png'} style={{ width: '30rem', height: '20rem' }} />
+                                <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Tuzla</Typography>
+                            </div>
+                            <div className='p-left'>
+                                <img src={'/assets/travnik.png'} style={{ width: '30rem', height: '20rem' }} />
+                                <Typography variant='h6' sx={{ ml: '2rem', mt: '-2rem' }}>Tešanj</Typography>
+                            </div>
+                        </Slider>
+                    </Box>
                 </Box>
-                <Box sx={{ my: '5rem' }}>
+                <Box sx={{ my: '5rem', mr: '1.5rem' }}>
                     <Typography sx={{ fontSize: '2.5rem', fontWeight: '600', mb: '2.7rem' }}>Popular Accommodations</Typography>
-                    <Slider {...settings2}>
-                        {accommodations && accommodations.responseAccommodations && accommodations.responseAccommodations.map((acc, index) => (
-                            <AccommodationItem key={index} acc={acc} />
-                        ))}
-                    </Slider>
+                    <Box sx={{ maxWidth: '87.5rem', margin: 'auto' }}>
+                        <Slider {...settings2}>
+                            {accommodations && accommodations.responseAccommodations && accommodations.responseAccommodations.map((acc, index) => (
+                                <AccommodationItem key={index} acc={acc} />
+                            ))}
+                        </Slider>
+                    </Box>
                     <Box sx={{ my: '5rem' }} display='block' textAlign='center'>
                         <Link to='/accommodations' className='btn-hover' style={{ backgroundColor: '#F16A67', color: '#fff', padding: '0.7rem 5rem', borderRadius: '4px' }}>View All</Link>
                     </Box>
