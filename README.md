@@ -1,6 +1,5 @@
 # Booking App
 Booking App is a web application created during the Blandus internship. It allows users to register, view, rent and review accommodations in Bosnia and Herzegovina. <br/> <br/>
-Application Demo: https://booking-app-es.netlify.app/
 
 # Built With
 <li>React.js</li>
